@@ -14,20 +14,6 @@
 
 package com.google.android.gms.plus.sample.quickstart;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.common.SignInButton;
-import com.google.android.gms.common.api.CommonStatusCodes;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
-import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.plus.People;
-import com.google.android.gms.plus.People.LoadPeopleResult;
-import com.google.android.gms.plus.Plus;
-import com.google.android.gms.plus.model.people.Person;
-import com.google.android.gms.plus.model.people.PersonBuffer;
-
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.PendingIntent;
@@ -42,6 +28,20 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.CommonStatusCodes;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.plus.People;
+import com.google.android.gms.plus.People.LoadPeopleResult;
+import com.google.android.gms.plus.Plus;
+import com.google.android.gms.plus.model.people.Person;
+import com.google.android.gms.plus.model.people.PersonBuffer;
 
 import java.util.ArrayList;
 
@@ -119,8 +119,8 @@ public class MainActivity extends FragmentActivity implements
     mSignOutButton.setOnClickListener(this);
     mRevokeButton.setOnClickListener(this);
 
-    mCirclesList = new ArrayList<String>();
-    mCirclesAdapter = new ArrayAdapter<String>(
+    mCirclesList = new ArrayList<>();
+    mCirclesAdapter = new ArrayAdapter<>(
         this, R.layout.circle_member, mCirclesList);
     mCirclesListView.setAdapter(mCirclesAdapter);
 
